@@ -53,7 +53,7 @@
 
     <form action="" id="form" name="clc">
         <input class="ip1" id="ip1" type="text" name="display" style="width: 310px; height: 50px;"> <br>
-        <input class="keys" id="btn" type="button" value="9" onclick="display.value += '9'">
+        <input class="keys" id="btn" type="button" value="9" onclick="clc.display.value += '9'">
         <input class="keys" id="btn" type="button" value="8" onclick="clc.display.value += '8'">
         <input class="keys" id="btn" type="button" value="7" onclick="clc.display.value += '7'">
         <input class="keys" id="btn" type="button" value="+" onclick="clc.display.value += '+'"> <br>
@@ -67,42 +67,19 @@
         <input class="keys" id="btn" type="button" value="*" onclick="clc.display.value += '*'"> <br>
         <input class="keys" id="btn" type="button" value="." onclick="clc.display.value += '.'">
         <input class="keys" id="btn" type="button" value="0" onclick="clc.display.value += '0'">
-        <input class="keys" id="btn" type="button" value="C" onclick="clc.display.value += ''">
+        <input class="keys" id="btn" type="button" value="C" onclick="clc.display.value = display.value.slice(0,-1)">
         <input class="keys" id="btn" type="button" value="/" onclick="clc.display.value += '/'" > <br>
         <input class="keys" id="btn" type="reset" value="AC" onclick="clc.display.value += ' '"  style="width: 150px;">
-        <!-- <input id="result" type="button" value="=" onclick="solve()"  style="width: 150px;"> -->
         <input class="keys" id="submit" type="button" value="=" onclick="clc.display.value = eval(clc.display.value)"  style="width: 150px;">
-        <!-- <input id="btn" type="button" value="0"> -->
-        <!-- <input id="btn" type="button" value="0"> -->
+     
 
     </form>
 </div>
 
-    <!-- <script>
-        let foem=document.getElementById("form")
-        let disp=document.getElementById("ip1")
-        
-    </script> -->
-
-
-<script>
-    // exp.value=' '
-    // function addValue(x){
-    //     if(x=='C'){
-    //         exp.value=exp.value.slice(0, exp.value.length)
-    //     }
-
-    // }
-    // addValue(x)
+ 
 
 
 
-     // Function that evaluates the digit and return result 
-     function solve() { 
-            let x = document.getElementById("result").value 
-            let y = math.evaluate(x) 
-            document.getElementById("result").value = y 
-        } 
 </script>
     
 </body>
